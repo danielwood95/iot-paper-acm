@@ -1,15 +1,15 @@
 This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: ccs-template.aux
+The top-level auxiliary file: iot-paper-acm.aux
 The style file: ACM-Reference-Format.bst
-I found no \citation commands---while reading file ccs-template.aux
+I found no \citation commands---while reading file iot-paper-acm.aux
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: ccs-sample.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 0 entries,
             5706 wiz_defined-function locations,
-            1302 strings with 15203 characters,
+            1302 strings with 15205 characters,
 and the built_in function-call counts, 95 in all, are:
 = -- 0
 > -- 0

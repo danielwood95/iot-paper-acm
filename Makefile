@@ -9,7 +9,7 @@
 PACKAGE=acmart
 
 SAMPLES = \
-	ccs-template.tex 
+	iot-paper-acm.tex 
 
 PDF = $(PACKAGE).pdf ${SAMPLES:%.tex=%.pdf}
 
