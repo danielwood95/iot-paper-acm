@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 JUL 2017 11:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  19 JUL 2017 08:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -28,7 +28,6 @@ Package acmart Info: Explicitly selecting natbib mode on input line 96.
 Package acmart Info: Not using anonymous mode on input line 104.
 Package acmart Info: Not using timestamp mode on input line 112.
 Package acmart Info: Not using timestamp mode on input line 122.
-Package acmart Info: Using anonymous mode on input line 131.
 Class acmart Info: Using format sigconf, number 4 on input line 131.
 Class acmart Info: Using fontsize 9pt on input line 189.
 
@@ -645,8 +644,7 @@ Excluding comment 'comment') Excluding comment 'CCSXML'
 \c@theorem=\count124
 
 Special comment 'acks' Excluding comment 'screenonly'
-Include comment 'printonly' Excluding comment 'anonsuppress'
-Excluding comment 'acks'
+Include comment 'printonly' Include comment 'anonsuppress'
 LaTeX Font Info:    Try loading font information for T1+LinuxLibertineT-TLF on 
 input line 2354.
 
@@ -859,16 +857,16 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 38.
+(Font)              scaled to size 17.28pt on input line 37.
 LaTeX Font Info:    Try loading font information for T1+LinuxBiolinumT-TLF on i
-nput line 38.
+nput line 37.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/libertine/T1LinuxBiolinumT-TLF.fd
 File: T1LinuxBiolinumT-TLF.fd 2012/11/26 (autoinst) Font definitions for T1/Lin
 uxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 38.
+(Font)              scaled to size 17.28pt on input line 37.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -876,95 +874,89 @@ Package microtype Info: Loading generic settings for font family
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/bx/n' in size <17.28> not
  available
 (Font)              Font shape `T1/LinuxBiolinumT-TLF/b/n' tried instead on inp
-ut line 38.
+ut line 37.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 38.
+(Font)              scaled to size 17.28pt on input line 37.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 38.
+(Font)              scaled to size 12.0pt on input line 37.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 38.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 38.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 38.
- (./ccs-body.tex (./body.tex
+(Font)              scaled to size 10.0pt on input line 37.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 4.
+(Font)              scaled to size 10.0pt on input line 37.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-msa.cfg
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 9.0pt on input line 37.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 10.95pt on input line 37.
 
- [1.1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+(./ccs-body.tex
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 9.
+
+Underfull \vbox (badness 1043) has occurred while \output is active []
+
+ (./body.tex [1.1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdf
+tex.map}
 
 ]
-Underfull \vbox (badness 1297) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Overfull \hbox (8.81381pt too wide) in paragraph at lines 48--49
-\T1/LinuxLibertineT-TLF/m/n/9 (-20) To ex-am-ine meta-data from a suite of mIoT
- de-vices, my re-search/project
- []
-
-[2.2] <network.png, id=98, 1064.97874pt x 821.0675pt>
+ [2.2]
+<network.png, id=118, 1064.97874pt x 821.0675pt>
 File: network.png Graphic file (type png)
  <use network.png>
-Package pdftex.def Info: network.png used on input line 72.
+Package pdftex.def Info: network.png used on input line 49.
 (pdftex.def)             Requested size: 212.99197pt x 164.21059pt.
+ [3.3 <./network.png>] [4.4] <bloodpressure.png, id=143, 383.5128pt x 198.5016p
+t>
+File: bloodpressure.png Graphic file (type png)
 
-[3.3 <./network.png>] [4.4]
-Underfull \hbox (badness 1990) in paragraph at lines 151--151
-[]\T1/LinuxLibertineT-TLF/b/n/9 Figure 3: |Cap-tured HTTP Packet re-veals na-tu
-re of de-
- []
+<use bloodpressure.png>
+Package pdftex.def Info: bloodpressure.png used on input line 127.
+(pdftex.def)             Requested size: 191.75592pt x 99.25055pt.
 
-<bloodpacket.png, id=123, 569.4876pt x 196.0926pt>
-File: bloodpacket.png Graphic file (type png)
- <use bloodpacket.png>
-Package pdftex.def Info: bloodpacket.png used on input line 153.
-(pdftex.def)             Requested size: 227.791pt x 78.43564pt.
-
-Underfull \hbox (badness 1990) in paragraph at lines 159--159
+Underfull \hbox (badness 1990) in paragraph at lines 131--131
 []\T1/LinuxLibertineT-TLF/b/n/9 Figure 4: |Cap-tured HTTP Packet re-veals na-tu
 re of de-
  []
 
-<bloodpressure.png, id=124, 383.5128pt x 198.5016pt>
-File: bloodpressure.png Graphic file (type png)
- <use bloodpressure.png>
-Package pdftex.def Info: bloodpressure.png used on input line 161.
-(pdftex.def)             Requested size: 191.75592pt x 99.25055pt.
+<bloodpacket.png, id=144, 569.4876pt x 196.0926pt>
+File: bloodpacket.png Graphic file (type png)
+ <use bloodpacket.png>
+Package pdftex.def Info: bloodpacket.png used on input line 133.
+(pdftex.def)             Requested size: 227.791pt x 78.43564pt.
 ))
 (./iot-paper-acm.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 40.
 
-) [5.5 <./bloodpacket.png> <./bloodpressure.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 45.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 45.
+) [5.5 <./bloodpressure.png> <./bloodpacket.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 44.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 44.
  (./iot-paper-acm.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 45.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 45.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 44.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 44.
 Package rerunfilecheck Info: File `iot-paper-acm.out' has not changed.
-(rerunfilecheck)             Checksum: A7B959A9D8C0644F423E2FF168A7669A;2357.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
+(rerunfilecheck)             Checksum: A331C1142C8ADF8EF5C8FBAC618433D5;3408.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 44.
  ) 
 Here is how much of TeX's memory you used:
- 16751 strings out of 493089
- 251701 string characters out of 6134842
- 363129 words of memory out of 5000000
- 19559 multiletter control sequences out of 15000+600000
- 91778 words of font info for 203 fonts, out of 8000000 for 9000
+ 16792 strings out of 493089
+ 252555 string characters out of 6134842
+ 363169 words of memory out of 5000000
+ 19580 multiletter control sequences out of 15000+600000
+ 97320 words of font info for 220 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,11n,94p,1605b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,12n,94p,1605b,464s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/newtx/libertinealt.enc}{/
 usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texli
 ve/2015/texmf-dist/fonts/enc/dvips/libertine/lbtn_c7kyj5.enc}{/usr/local/texliv
@@ -981,10 +973,10 @@ exlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/
 xmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/public/newtx/zxlr.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
 ype1/public/newtx/zxlri.pfb>
-Output written on iot-paper-acm.pdf (5 pages, 1905933 bytes).
+Output written on iot-paper-acm.pdf (5 pages, 1905191 bytes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
- 158 compressed objects within 2 object streams
- 43 named destinations out of 1000 (max. 500000)
- 18592 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 219 PDF objects out of 1000 (max. 8388607)
+ 178 compressed objects within 2 object streams
+ 48 named destinations out of 1000 (max. 500000)
+ 22728 words of extra memory for PDF output out of 24883 (max. 10000000)
 
