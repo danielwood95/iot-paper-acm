@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  19 JUL 2017 08:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  19 JUL 2017 23:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -910,21 +910,24 @@ tex.map}
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [2.2]
 <network.png, id=118, 1064.97874pt x 821.0675pt>
 File: network.png Graphic file (type png)
  <use network.png>
-Package pdftex.def Info: network.png used on input line 49.
+Package pdftex.def Info: network.png used on input line 50.
 (pdftex.def)             Requested size: 212.99197pt x 164.21059pt.
  [3.3 <./network.png>] [4.4] <bloodpressure.png, id=143, 383.5128pt x 198.5016p
 t>
 File: bloodpressure.png Graphic file (type png)
 
 <use bloodpressure.png>
-Package pdftex.def Info: bloodpressure.png used on input line 127.
+Package pdftex.def Info: bloodpressure.png used on input line 128.
 (pdftex.def)             Requested size: 191.75592pt x 99.25055pt.
 
-Underfull \hbox (badness 1990) in paragraph at lines 131--131
+Underfull \hbox (badness 1990) in paragraph at lines 132--132
 []\T1/LinuxLibertineT-TLF/b/n/9 Figure 4: |Cap-tured HTTP Packet re-veals na-tu
 re of de-
  []
@@ -932,7 +935,7 @@ re of de-
 <bloodpacket.png, id=144, 569.4876pt x 196.0926pt>
 File: bloodpacket.png Graphic file (type png)
  <use bloodpacket.png>
-Package pdftex.def Info: bloodpacket.png used on input line 133.
+Package pdftex.def Info: bloodpacket.png used on input line 134.
 (pdftex.def)             Requested size: 227.791pt x 78.43564pt.
 ))
 (./iot-paper-acm.bbl
@@ -956,7 +959,7 @@ Here is how much of TeX's memory you used:
  19580 multiletter control sequences out of 15000+600000
  97320 words of font info for 220 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 60i,12n,94p,1605b,464s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,12n,94p,1550b,464s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/newtx/libertinealt.enc}{/
 usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texli
 ve/2015/texmf-dist/fonts/enc/dvips/libertine/lbtn_c7kyj5.enc}{/usr/local/texliv
@@ -973,7 +976,7 @@ exlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/
 xmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/public/newtx/zxlr.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
 ype1/public/newtx/zxlri.pfb>
-Output written on iot-paper-acm.pdf (5 pages, 1905191 bytes).
+Output written on iot-paper-acm.pdf (5 pages, 1905658 bytes).
 PDF statistics:
  219 PDF objects out of 1000 (max. 8388607)
  178 compressed objects within 2 object streams
