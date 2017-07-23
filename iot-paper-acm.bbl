@@ -37,4 +37,101 @@
 \providecommand\natexlab[1]{#1}
 \providecommand\showeprint[2][]{arXiv:#2}
 
+\bibitem[\protect\citeauthoryear{Apthorpe}{Apthorpe}{2016}]%
+        {apthorpeIoT}
+\bibfield{author}{\bibinfo{person}{Noah Apthorpe}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{A Smart Home is No Castle: Privacy Vulnerabilities
+  of Encrypted IoT Traffic}. In \bibinfo{booktitle}{{\em Workshop on Data and
+  Algorithmic Transparency}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Cha and Kim}{Cha and Kim}{2017}]%
+        {chaMachineLearning}
+\bibfield{author}{\bibinfo{person}{Seunghun Cha} {and}
+  \bibinfo{person}{Hyoungshick Kim}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{booktitle}{{\em Detecting encrypted traffic: a machine
+  learning approach}}. Vol.~\bibinfo{volume}{10144}.
+\newblock \bibinfo{publisher}{Springer, Cham}.
+\newblock
+\showISBNx{9783319565484}
+\newblock
+\shownote{Inofrmation Security Applications.}
+
+
+\bibitem[\protect\citeauthoryear{Commission}{Commission}{2016}]%
+        {ftc}
+\bibfield{author}{\bibinfo{person}{Federal~Trade Commission}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Internet of Things: Privacy \& Security in a
+  Connected World}. In \bibinfo{booktitle}{{\em FTC Staff Report}}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Copos}{Copos}{1993}]%
+        {coposIoT}
+\bibfield{author}{\bibinfo{person}{Bogdan et~al Copos}.}
+  \bibinfo{year}{1993}\natexlab{}.
+\newblock \showarticletitle{Is Anybody Home? Inferring Activity From Smart Home
+  Network Traffic}. In \bibinfo{booktitle}{{\em The title of the book}} {\em
+  (\bibinfo{series}{5})}, \bibfield{editor}{\bibinfo{person}{The editor}}
+  (Ed.), Vol.~\bibinfo{volume}{4}. The organization, \bibinfo{publisher}{The
+  publisher}, \bibinfo{address}{The address of the publisher},
+  \bibinfo{pages}{213}.
+\newblock
+\newblock
+\shownote{An optional note.}
+
+
+\bibitem[\protect\citeauthoryear{Dimitrov}{Dimitrov}{2016}]%
+        {dimitrovIoT}
+\bibfield{author}{\bibinfo{person}{Dimiter Dimitrov}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Medical Internet of Things and Big Data in
+  Healthcare}.
+\newblock \bibinfo{journal}{{\em Healthc Inform Res\/}} \bibinfo{volume}{3},
+  \bibinfo{number}{22} (\bibinfo{date}{7} \bibinfo{year}{2016}),
+  \bibinfo{pages}{156--163}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{of~Health and for Civil~Rights}{of~Health and
+  for Civil~Rights}{nda}]%
+        {privacyHIPAArule}
+\bibfield{author}{\bibinfo{person}{United States~Department of Health} {and}
+  \bibinfo{person}{Human Services~Office for Civil~Rights}.}
+  \bibinfo{year}{n.d.}\natexlab{a}.
+\newblock \bibinfo{title}{Summary of the HIPAA Privacy Rule}.
+\newblock   (\bibinfo{year}{n.d.}).
+\newblock
+\showURL{%
+\url{https://www.hhs.gov/hipaa/for-professionals/privacy/index.html}}
+
+
+\bibitem[\protect\citeauthoryear{of~Health and for Civil~Rights}{of~Health and
+  for Civil~Rights}{ndb}]%
+        {securityHIPAArule}
+\bibfield{author}{\bibinfo{person}{United States~Department of Health} {and}
+  \bibinfo{person}{Human Services~Office for Civil~Rights}.}
+  \bibinfo{year}{n.d.}\natexlab{b}.
+\newblock \bibinfo{title}{Summary of the HIPAA Security Rule}.
+\newblock   (\bibinfo{year}{n.d.}).
+\newblock
+\showURL{%
+\url{https://www.hhs.gov/hipaa/for-professionals/security/index.html}}
+
+
+\bibitem[\protect\citeauthoryear{Srinivasan}{Srinivasan}{2008}]%
+        {srinivasan2008fats}
+\bibfield{author}{\bibinfo{person}{Vijay et~al Srinivasan}.}
+  \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{Protecting your daily in-home activity information
+  from a wireless snooping attack}. In \bibinfo{booktitle}{{\em Proceedings of
+  the 10th international conference on Ubiquitous computing}}.
+  \bibinfo{publisher}{ACM}, \bibinfo{address}{New York},
+  \bibinfo{pages}{202--211}.
+\newblock
+
+
 \end{thebibliography}

@@ -2,50 +2,56 @@ This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: iot-paper-acm.aux
 The style file: ACM-Reference-Format.bst
-I found no \citation commands---while reading file iot-paper-acm.aux
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: ccs-sample.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 0 entries,
+Warning--empty publisher in apthorpeIoT
+Warning--empty address in apthorpeIoT
+Warning--page numbers missing in both pages and numpages fields in apthorpeIoT
+Warning--empty address in chaMachineLearning
+Warning--empty publisher in ftc
+Warning--empty address in ftc
+Warning--page numbers missing in both pages and numpages fields in ftc
+You've used 8 entries,
             5706 wiz_defined-function locations,
-            1302 strings with 15205 characters,
-and the built_in function-call counts, 95 in all, are:
-= -- 0
-> -- 0
+            1359 strings with 16552 characters,
+and the built_in function-call counts, 8860 in all, are:
+= -- 1060
+> -- 215
 < -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 8
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 1
-empty$ -- 1
-format.name$ -- 0
-if$ -- 2
-int.to.chr$ -- 1
++ -- 59
+- -- 212
+* -- 564
+:= -- 904
+add.period$ -- 42
+call.type$ -- 8
+change.case$ -- 43
+chr.to.int$ -- 7
+cite$ -- 15
+duplicate$ -- 650
+empty$ -- 479
+format.name$ -- 98
+if$ -- 1940
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 40
-num.names$ -- 0
-pop$ -- 1
+missing$ -- 26
+newline$ -- 109
+num.names$ -- 65
+pop$ -- 303
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 82
 quote$ -- 0
-skip$ -- 1
+skip$ -- 249
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 954
+swap$ -- 51
+text.length$ -- 252
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
+type$ -- 205
+warning$ -- 7
+while$ -- 71
 width$ -- 0
-write$ -- 39
-(There was 1 error message)
+write$ -- 187
+(There were 7 warnings)
