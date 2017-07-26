@@ -17,44 +17,45 @@
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \citation{ftc}
-\citation{securityHIPAArule}
-\citation{privacyHIPAArule}
-\citation{dimitrovIoT}
+\citation{securityHIPAArule,privacyHIPAArule}
+\citation{}
+\citation{}
+\citation{chaMachineLearning}
 \@writefile{toc}{\contentsline {section}{Abstract}{1}{section*.1}}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}IoT Devices Studied}{1}{subsection.1.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Protecting digital health information}{1}{subsection.1.2}}
-\citation{coposIoT}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{1}{section.2}}
 \citation{srinivasan2008fats}
+\citation{coposIoT}
 \citation{apthorpeIoT}
+\citation{dimitrovIoT}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Device Evaluation Methods}{2}{section.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Data collection environment and connection patterns between devices and infrastructure components.\relax }}{2}{figure.caption.4}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:data-collection}{{1}{2}{Data collection environment and connection patterns between devices and infrastructure components.\relax }{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Data Collection}{2}{subsection.3.1}}
 \citation{chaMachineLearning}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Implementation}{2}{section.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Approach}{2}{subsection.3.1}}
-\citation{apthorpeIoT}
-\citation{chaMachineLearning}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Diagram of the data collection environment and data flow\relax }}{3}{figure.caption.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Data Collection}{3}{subsection.3.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Deep Packet Inspection}{3}{subsection.3.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Naive ASCII approach}{3}{subsection.3.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Shannon Entropy Test}{3}{subsection.3.5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Comparison of plaintext detection approaches\relax }}{4}{figure.caption.5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Chi Squared Test}{4}{subsection.3.6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Method Comparison}{4}{subsection.3.7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Dictionary Analysis}{4}{subsection.3.8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.9}Representing the Results}{4}{subsection.3.9}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{4}{section.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Blood pressure monitor leaks information}{4}{subsection.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Plaintext Identification}{3}{subsection.3.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Naive ASCII approach}{3}{subsubsection.3.2.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Shannon Entropy Test}{3}{subsubsection.3.2.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}Chi-Squared Test}{3}{subsubsection.3.2.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.4}Method Comparison}{3}{subsubsection.3.2.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Comparison of plaintext detection approaches.\relax }}{3}{figure.caption.5}}
+\newlabel{fig:method-comp}{{2}{3}{Comparison of plaintext detection approaches.\relax }{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.5}Dictionary Analysis}{3}{subsubsection.3.2.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Metadata Analysis}{3}{subsection.3.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Detected Privacy Vulnerabilties}{3}{section.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Blood pressure monitor leaks information}{3}{subsection.4.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Withings Blood Pressure Monitor sends image indicating device purpose in the clear.\relax }}{4}{figure.caption.6}}
+\newlabel{fig:bp-image}{{3}{4}{Withings Blood Pressure Monitor sends image indicating device purpose in the clear.\relax }{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces HTTP packet sent by IoT blood pressure monitor reveals nature of device and user behavior.\relax }}{4}{figure.caption.7}}
+\newlabel{fig:bp-packet}{{4}{4}{HTTP packet sent by IoT blood pressure monitor reveals nature of device and user behavior.\relax }{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Smart scale encrypts user data}{4}{subsection.4.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Informing Users of Vulnerabilities}{4}{section.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{4}{section.6}}
 \bibstyle{ACM-Reference-Format}
 \bibdata{ccs-sample}
 \bibcite{apthorpeIoT}{{1}{2016}{{Apthorpe}}{{Apthorpe}}}
 \bibcite{chaMachineLearning}{{2}{2017}{{Cha and Kim}}{{Cha and Kim}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Withings Blood Pressure Monitor sends image in the clear\relax }}{5}{figure.caption.6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Captured HTTP Packet reveals nature of device/user behavior\relax }}{5}{figure.caption.7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Smart scale encrypts user data}{5}{subsection.4.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{5}{section.5}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{5}{section.6}}
-\@writefile{toc}{\contentsline {section}{References}{5}{section*.10}}
 \bibcite{ftc}{{3}{2016}{{Commission}}{{Commission}}}
 \bibcite{coposIoT}{{4}{1993}{{Copos}}{{Copos}}}
 \bibcite{dimitrovIoT}{{5}{2016}{{Dimitrov}}{{Dimitrov}}}
@@ -65,5 +66,7 @@
 \newlabel{tocindent0}{0pt}
 \newlabel{tocindent1}{4.185pt}
 \newlabel{tocindent2}{10.34999pt}
-\newlabel{tocindent3}{0pt}
-\newlabel{TotPages}{{6}{6}{}{page.6}{}}
+\newlabel{tocindent3}{18.198pt}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{5}{section.7}}
+\@writefile{toc}{\contentsline {section}{References}{5}{section*.10}}
+\newlabel{TotPages}{{5}{5}{}{page.5}{}}
