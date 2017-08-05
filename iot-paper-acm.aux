@@ -18,6 +18,7 @@
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \citation{ftc}
 \citation{securityHIPAArule,privacyHIPAArule}
+\citation{tinker}
 \citation{apthorpeIoT}
 \@writefile{toc}{\contentsline {section}{Abstract}{1}{section*.1}}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}}
@@ -26,22 +27,26 @@
 \citation{coposIoT}
 \citation{apthorpeIoT}
 \citation{dimitrovIoT}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Data collection environment and connection patterns between devices and infrastructure components.\relax }}{2}{figure.caption.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces User interface displays connected devices in the home and privacy status\relax }}{2}{figure.caption.4}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:data-collection}{{1}{2}{Data collection environment and connection patterns between devices and infrastructure components.\relax }{figure.caption.4}{}}
+\newlabel{fig:dashboard}{{1}{2}{User interface displays connected devices in the home and privacy status\relax }{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Device Evaluation Methods}{2}{section.3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Data Collection}{2}{subsection.3.1}}
 \citation{chaMachineLearning}
+\citation{barrons}
+\citation{names}
+\citation{nist}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Data collection environment and connection patterns between devices and infrastructure components.\relax }}{3}{figure.caption.5}}
+\newlabel{fig:data-collection}{{2}{3}{Data collection environment and connection patterns between devices and infrastructure components.\relax }{figure.caption.5}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Plaintext Identification}{3}{subsection.3.2}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Naive ASCII approach}{3}{subsubsection.3.2.1}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Shannon Entropy Test}{3}{subsubsection.3.2.2}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}Chi-Squared Test}{3}{subsubsection.3.2.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Comparison of plaintext detection approaches on 75,000 packet payloads from the devices studied. The false positive rate indicates the probability that a particular approach identifies a payload as plaintext when it is actually encrypted (whether by protocol or by the application itself). Column 3 indicates what percent of total packets were identified as plaintext. Less selective approaches identify more plaintext packets, but also result in higher false positive rates.\relax }}{3}{figure.caption.5}}
-\newlabel{fig:method-comp}{{2}{3}{Comparison of plaintext detection approaches on 75,000 packet payloads from the devices studied. The false positive rate indicates the probability that a particular approach identifies a payload as plaintext when it is actually encrypted (whether by protocol or by the application itself). Column 3 indicates what percent of total packets were identified as plaintext. Less selective approaches identify more plaintext packets, but also result in higher false positive rates.\relax }{figure.caption.5}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.4}Method Comparison}{3}{subsubsection.3.2.4}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.5}Dictionary Analysis}{3}{subsubsection.3.2.5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Withings Smart Scale traffic destinations\relax }}{4}{figure.caption.6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Comparison of plaintext detection approaches on 225,000 packet payloads from the devices studied. The precision metric indicates the probability that a particular approach correctly identifies a payload as plaintext. Column 3 indicates what percent of total packets were identified as plaintext. Less selective approaches identify more plaintext packets, but also result in higher false positive rates.\relax }}{4}{figure.caption.6}}
+\newlabel{fig:method-comp}{{3}{4}{Comparison of plaintext detection approaches on 225,000 packet payloads from the devices studied. The precision metric indicates the probability that a particular approach correctly identifies a payload as plaintext. Column 3 indicates what percent of total packets were identified as plaintext. Less selective approaches identify more plaintext packets, but also result in higher false positive rates.\relax }{figure.caption.6}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Metadata Analysis}{4}{subsection.3.3}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Detected Privacy Vulnerabilties}{4}{section.4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Blood pressure monitor leaks information}{4}{subsection.4.1}}
@@ -55,15 +60,19 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Smart scales and Blood Sugar Monitor encrypt user data}{5}{subsection.4.2}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Informing Users of Vulnerabilities}{5}{section.5}}
 \@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{5}{section.6}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{5}{section.7}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Future Work}{5}{section.8}}
-\bibcite{chaMachineLearning}{{2}{2017}{{Cha and Kim}}{{Cha and Kim}}}
-\bibcite{ftc}{{3}{2016}{{Commission}}{{Commission}}}
-\bibcite{coposIoT}{{4}{1993}{{Copos}}{{Copos}}}
-\bibcite{dimitrovIoT}{{5}{2016}{{Dimitrov}}{{Dimitrov}}}
-\bibcite{privacyHIPAArule}{{6}{nda}{{of~Health and for Civil~Rights}}{{of~Health and for Civil~Rights}}}
-\bibcite{securityHIPAArule}{{7}{ndb}{{of~Health and for Civil~Rights}}{{of~Health and for Civil~Rights}}}
-\bibcite{srinivasan2008fats}{{8}{2008}{{Srinivasan}}{{Srinivasan}}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Future Work}{5}{section.7}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{5}{section.8}}
+\bibcite{names}{{2}{2003}{{Bureau}}{{Bureau}}}
+\bibcite{chaMachineLearning}{{3}{2017}{{Cha and Kim}}{{Cha and Kim}}}
+\bibcite{ftc}{{4}{2016}{{Commission}}{{Commission}}}
+\bibcite{coposIoT}{{5}{1993}{{Copos}}{{Copos}}}
+\bibcite{dimitrovIoT}{{6}{2016}{{Dimitrov}}{{Dimitrov}}}
+\bibcite{tinker}{{7}{2016}{{Feamster}}{{Feamster}}}
+\bibcite{nist}{{8}{2010}{{McCallister and Scarfone}}{{McCallister and Scarfone}}}
+\bibcite{privacyHIPAArule}{{9}{nda}{{of~Health and for Civil~Rights}}{{of~Health and for Civil~Rights}}}
+\bibcite{securityHIPAArule}{{10}{ndb}{{of~Health and for Civil~Rights}}{{of~Health and for Civil~Rights}}}
+\bibcite{barrons}{{11}{2012}{{Sell and Chapman}}{{Sell and Chapman}}}
+\bibcite{srinivasan2008fats}{{12}{2008}{{Srinivasan}}{{Srinivasan}}}
 \newlabel{tocindent-1}{0pt}
 \newlabel{tocindent0}{0pt}
 \newlabel{tocindent1}{4.185pt}

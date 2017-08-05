@@ -47,6 +47,17 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Bureau}{Bureau}{2003}]%
+        {names}
+\bibfield{author}{\bibinfo{person}{United States~Census Bureau}.}
+  \bibinfo{year}{2003}\natexlab{}.
+\newblock \bibinfo{title}{Frequently Occurring Surnames from the Census 2000}.
+\newblock   (\bibinfo{year}{2003}).
+\newblock
+\showURL{%
+\url{https://www.census.gov/topics/population/genealogy/data/2000_surnames.html}}
+
+
 \bibitem[\protect\citeauthoryear{Cha and Kim}{Cha and Kim}{2017}]%
         {chaMachineLearning}
 \bibfield{author}{\bibinfo{person}{Seunghun Cha} {and}
@@ -96,6 +107,30 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Feamster}{Feamster}{2016}]%
+        {tinker}
+\bibfield{author}{\bibinfo{person}{Nick Feamster}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \bibinfo{title}{Who Will Secure the Internet of Things?}
+\newblock
+  \bibinfo{howpublished}{https://freedom-to-tinker.com/2016/01/19/who-will-secure-the-internet-of-things/}.
+    (\bibinfo{year}{2016}).
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{McCallister and Scarfone}{McCallister and
+  Scarfone}{2010}]%
+        {nist}
+\bibfield{author}{\bibinfo{person}{Grance~Tim McCallister, Erika} {and}
+  \bibinfo{person}{Karen Scarfone}.} \bibinfo{year}{2010}\natexlab{}.
+\newblock \showarticletitle{Guide to Protecting the Confidentiality of
+  Personally Identifiable Information (PII)}.
+\newblock \bibinfo{journal}{{\em Special Publication\/}} \bibinfo{volume}{122},
+  \bibinfo{number}{800} (\bibinfo{date}{4} \bibinfo{year}{2010}),
+  \bibinfo{pages}{2}.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{of~Health and for Civil~Rights}{of~Health and
   for Civil~Rights}{nda}]%
         {privacyHIPAArule}
@@ -120,6 +155,16 @@
 \newblock
 \showURL{%
 \url{https://www.hhs.gov/hipaa/for-professionals/security/index.html}}
+
+
+\bibitem[\protect\citeauthoryear{Sell and Chapman}{Sell and Chapman}{2012}]%
+        {barrons}
+\bibfield{author}{\bibinfo{person}{Rothenberg Mikel~A. Sell, Rebecca} {and}
+  \bibinfo{person}{Charles~F. Chapman}.} \bibinfo{year}{2012}\natexlab{}.
+\newblock \bibinfo{booktitle}{{\em Dictionary of Medical Terms}}.
+  Vol.~\bibinfo{volume}{6}.
+\newblock \bibinfo{publisher}{Barron's Educational Series}.
+\newblock
 
 
 \bibitem[\protect\citeauthoryear{Srinivasan}{Srinivasan}{2008}]%

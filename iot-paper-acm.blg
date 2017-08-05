@@ -5,6 +5,30 @@ The style file: ACM-Reference-Format.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: ccs-sample.bib
+You're missing a field part---line 52 of file ccs-sample.bib
+ :   month     = 
+ :               ,
+I'm skipping whatever remains of this entry
+Too many commas in name 1 of "Sell, Rebecca, Rothenberg, Mikel A. and Chapman, Charles F." for entry barrons
+while executing---line 3325 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "Sell, Rebecca, Rothenberg, Mikel A. and Chapman, Charles F." for entry barrons
+while executing---line 3325 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "Sell, Rebecca, Rothenberg, Mikel A. and Chapman, Charles F." for entry barrons
+while executing---line 3325 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "McCallister, Erika, Grance, Tim and Scarfone, Karen" for entry nist
+while executing---line 3325 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "McCallister, Erika, Grance, Tim and Scarfone, Karen" for entry nist
+while executing---line 3325 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "McCallister, Erika, Grance, Tim and Scarfone, Karen" for entry nist
+while executing---line 3325 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "McCallister, Erika, Grance, Tim and Scarfone, Karen" for entry nist
+while executing---line 3371 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "McCallister, Erika, Grance, Tim and Scarfone, Karen" for entry nist
+while executing---line 3371 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "Sell, Rebecca, Rothenberg, Mikel A. and Chapman, Charles F." for entry barrons
+while executing---line 3371 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "Sell, Rebecca, Rothenberg, Mikel A. and Chapman, Charles F." for entry barrons
+while executing---line 3371 of file ACM-Reference-Format.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--empty publisher in apthorpeIoT
 Warning--empty address in apthorpeIoT
@@ -13,45 +37,58 @@ Warning--empty address in chaMachineLearning
 Warning--empty publisher in ftc
 Warning--empty address in ftc
 Warning--page numbers missing in both pages and numpages fields in ftc
-You've used 8 entries,
+Too many commas in name 1 of "McCallister, Erika, Grance, Tim and Scarfone, Karen" for entry nist
+while executing---line 3469 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "McCallister, Erika, Grance, Tim and Scarfone, Karen" for entry nist
+while executing---line 3469 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "McCallister, Erika, Grance, Tim and Scarfone, Karen" for entry nist
+while executing---line 3469 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "Sell, Rebecca, Rothenberg, Mikel A. and Chapman, Charles F." for entry barrons
+while executing---line 3469 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "Sell, Rebecca, Rothenberg, Mikel A. and Chapman, Charles F." for entry barrons
+while executing---line 3469 of file ACM-Reference-Format.bst
+Too many commas in name 1 of "Sell, Rebecca, Rothenberg, Mikel A. and Chapman, Charles F." for entry barrons
+while executing---line 3469 of file ACM-Reference-Format.bst
+Warning--empty address in barrons
+You've used 12 entries,
             5706 wiz_defined-function locations,
-            1359 strings with 16552 characters,
-and the built_in function-call counts, 8860 in all, are:
-= -- 1060
-> -- 215
+            1384 strings with 17175 characters,
+and the built_in function-call counts, 13022 in all, are:
+= -- 1611
+> -- 331
 < -- 0
-+ -- 59
-- -- 212
-* -- 564
-:= -- 904
-add.period$ -- 42
-call.type$ -- 8
-change.case$ -- 43
-chr.to.int$ -- 7
-cite$ -- 15
-duplicate$ -- 650
-empty$ -- 479
-format.name$ -- 98
-if$ -- 1940
++ -- 91
+- -- 334
+* -- 846
+:= -- 1354
+add.period$ -- 64
+call.type$ -- 12
+change.case$ -- 65
+chr.to.int$ -- 11
+cite$ -- 20
+duplicate$ -- 898
+empty$ -- 670
+format.name$ -- 154
+if$ -- 2834
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 26
-newline$ -- 109
-num.names$ -- 65
-pop$ -- 303
+missing$ -- 32
+newline$ -- 143
+num.names$ -- 97
+pop$ -- 414
 preamble$ -- 1
-purify$ -- 82
+purify$ -- 124
 quote$ -- 0
-skip$ -- 249
+skip$ -- 349
 stack$ -- 0
-substring$ -- 954
-swap$ -- 51
-text.length$ -- 252
+substring$ -- 1430
+swap$ -- 66
+text.length$ -- 401
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 205
-warning$ -- 7
-while$ -- 71
+type$ -- 296
+warning$ -- 8
+while$ -- 105
 width$ -- 0
-write$ -- 187
-(There were 7 warnings)
+write$ -- 259
+(There were 17 error messages)

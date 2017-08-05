@@ -17,7 +17,7 @@ Entities that collect e-PHI are required to
 \end{enumerate}
 
 Many medical IoT devices enable users to track their personal health via their smartphones and have the potential to leak e-PHI. 
-Encryption is the most obvious determinant of confidentiality in medical IoT device communications. Packets of data sent in the clear can be trivially intercepted by adversaries and network observers. Even if plaintext data is compressed, it is still trivial to recover the original content by recovering the compressed message and attempting decompression using a limited number of widely used compression algorithms. Transmitting application data in the clear is a severe (and seemingly obvious) design flaw, and yet it is prevalent among IoT devices. 
+Encryption is the most obvious determinant of confidentiality in medical IoT device communications. Packets of data sent in the clear can be trivially intercepted by adversaries and network observers. Even if plaintext data is compressed, it is still trivial to recover the original content by recovering the compressed message and attempting decompression using a limited number of widely used compression algorithms. Transmitting application data in the clear is a severe (and seemingly obvious) design flaw, and yet it is prevalent among IoT devices~\cite{tinker}.
 
 Even when medical IoT devices encrypt data transmitted to the cloud, a network observer could scrutinize metadata to obtain information about a user.  Several recent studies have demonstrated that IoT device traffic analysis can reveal user behavior  from correlations between device network activity and user interactions \cite{apthorpeIoT}.  
 
@@ -28,6 +28,13 @@ Surprisingly, we find that multiple tested devices send information related to t
 Even the devices that consistently encrypt health information are not without privacy vulnerabilities.  Network observers and adversaries can see traffic from these devices as being generated from specific IP addresses. By examining network traffic from an access point, it is possible to isolate traffic originating from a fixed set of IP addresses and subsequently mine the associated metadata for sensitive medical information. While in some home and hospital settings, individual IP addresses may be shielded by a NAT, the rise of IPv6 and devices tethered to cell phones makes this protection less relevant. 
 
 Though patients and doctors expect thier e-PHI to be properly protected, one of the major problems with commercially available IoT devices on the market is the user's lack of visibility in terms of how their data is handled. This paper presents a simple and intuitive user interface for IoT device users to monitor and visualize the data that their medical IoT devices transmit to the Internet. As traffic data from a suite of connected devices is captured on a local Wi-Fi access point, we mine the traffic for potentially revealing electronic personal health information that has been transmitted in the clear. The user interface lists each device connected to the access point, warning the user of potential plaintext leakages associated with each device. The goal was to make the interface universally intelligible so that average users with no comprehension of packets, encryption, or networks would be able to monitor how each device protected their e-PHI.
+
+\begin{figure}
+  \centering
+    \fbox{\includegraphics[scale=0.19]{dashboard}}
+  \caption{User interface displays connected devices in the home and privacy status}
+  \label{fig:dashboard}
+\end{figure}
 
 \section{Related Work}
 Due to the nature of packet data, it is not trivial to classify traffic as encrypted or plaintext. In ``Detecting encrypted traffic: a machine learning approach'' ~\cite{chaMachineLearning}, Seunghun Cha outlines a four-step methodology to determining encrypted versus unencrypted traffic:
@@ -78,7 +85,7 @@ We created an isolated test environment where we could connect various medical I
 
 \begin{figure}
   \centering
-    \fbox{\includegraphics[scale=0.2]{network}}
+    \fbox{\includegraphics[scale=0.18]{network}}
   \caption{Data collection environment and connection patterns between devices and infrastructure components.}
   \label{fig:data-collection}
 \end{figure}
@@ -100,7 +107,7 @@ If all the characters in the payload are contained within the 128 character ASCI
 
 \subsubsection{Shannon Entropy Test}
 %The next approach used determine whether or not a packet was encrypted was the Shannon Entropy Test. 
-The Shannon Entropy Test calculates the entropy of each payload string, which is a quantitative measure of the variability in the frequency of the different possible characters. While random (or in this case, encrypted) strings have very high entropy, unencrypted plaintext and English strings exhibit fairly low entropy. This is because most characters are drawn from the limited set of printable characters and in English, many letters are much more likely to appear than others. For example, the letter e appears roughly 12.5\% of the time, while the letter $j$ appears less than 0.2\% of the time. To calculate the Shannon Entropy of a string, let $X$ be a random variable that takes on possible values $x_1$, $x_2$, ..., $x_n$. $p(x_i)$ is the probability that $X = x_i$:
+The Shannon Entropy Test calculates the entropy of each payload string, which is a quantitative measure of the variability in the frequency of the different possible characters. While random (or in this case, encrypted) strings have very high entropy, unencrypted plaintext and English strings exhibit fairly low entropy. To calculate the Shannon Entropy of a string, let $X$ be a random variable that takes on possible values $x_1$, $x_2$, ..., $x_n$. $p(x_i)$ is the probability that $X = x_i$:
 $$H(X) = - \sum_{i = 1}^{n} p(x_i) log p(x_i)$$
 A packet's payload is presumed to be unencrypted if its Shannon entropy value is lower than a threshold parameter. For our analysis, we used a relatively high threshold parameter of $7.5$, so as not to discard some unencrypted payloads with high entropy (at the cost of misidentifying a small number of encrypted payloads with low entropy).
 
@@ -110,7 +117,7 @@ $$\chi^2 = \sum_{i=1}^{n} \frac{(o_i-e_i)^2}{e_i}$$
 The more a set of frequencies deviates from its expected values, the higher the value of $\chi^2$, and if the observed frequencies equal the expected frequencies then $\chi^2$ is 0. Therefore, English plaintext is expected to have a much higher deviation of character frequencies from the expected frequency (a uniformly random distribution). By setting the threshold value $\chi^2 = 1000$, we were able to effectively weed out the unencrypted payloads from those that were encrypted. 
 
 \subsubsection{Method Comparison}
-In order to determine which of the three methods (naive ASCII, Shannon Entropy, or Chi-Squared) yielded the most accurate classification of unencrypted packets, we ran a comparative analysis with five PCAP files with over 75,000 packets (Figure~\ref{fig:method-comp}). Out of the three methods, the naive ASCII approach was the most selective. It had a 0 percent false positive rate, but missed nearly all of the unencrypted packets, because many of the payloads contained some number extended ASCII characters. 
+In order to determine which of the three methods (naive ASCII, Shannon Entropy, or Chi-Squared) yielded the most accurate classification of unencrypted packets, we ran a comparative analysis with five PCAP files with over 225,000 packets (Figure~\ref{fig:method-comp}). Out of the three methods, the naive ASCII approach was the most selective. It had a 0 percent false positive rate, but missed nearly all of the unencrypted packets, because many of the payloads contained some number extended ASCII characters. 
 
 In contrast, the Shannon Entropy approach cast a much wider net, tagging a much larger share of packets as being unencrypted, though this approach suffered from a high false positive rate. Lowering the threshold entropy value did not significantly increase the accuracy of the approach, as fewer true unencrypted packets were identified as the threshold entropy value decreased. 
 
@@ -120,39 +127,39 @@ We found the most accurate encryption classification approach to be the Chi-Squa
 \begin{figure}
   \begin{center}
     \begin{tabular}{c|c|c} 
-    \textbf{Approach} & \textbf{False Positive Rate} & \textbf{\% packets plaintext}\\ [0.5ex] 
+    \textbf{Approach} & \textbf{Precision} & \textbf{\% packets plaintext}\\ [0.5ex] 
     \hline
-    Naive ASCII & $0.0$ & $0.005$ \\ 
-    Shannon Entropy &  $0.74$ & $0.162$ \\
-    Chi Square & $0.03$ & $0.049$ \\
+    Naive ASCII & $1$ & $0.5$ \\ 
+    Shannon Entropy &  $0.26$ & $16.2$ \\
+    Chi Square & $.97$ & $4.9$ \\
     \end{tabular}
-    \caption{Comparison of plaintext detection approaches on 75,000 packet payloads from the devices studied. The false positive rate indicates the probability that a particular approach identifies a payload as plaintext when it is actually encrypted (whether by protocol or by the application itself). Column 3 indicates what percent of total packets were identified as plaintext. Less selective approaches identify more plaintext packets, but also result in higher false positive rates.}
+    \caption{Comparison of plaintext detection approaches on 225,000 packet payloads from the devices studied. The precision metric indicates the probability that a particular approach correctly identifies a payload as plaintext. Column 3 indicates what percent of total packets were identified as plaintext. Less selective approaches identify more plaintext packets, but also result in higher false positive rates.}
     \label{fig:method-comp}
   \end{center}
 \end{figure}
 
 \subsubsection{Dictionary Analysis}
-Once we were able to identify plaintext packets, we identified potentially sensitive personal medical/identifying information by searching each string in the plaintext payload in several dictionaries. We used three dictionaries: a list of the 100 most common medical terms/conditions, a list of the most popular first male and female names, and a list of the most common personal identifying information (i.e. passport number, license, name, address, etc.). 
+Once we were able to identify plaintext packets, we identified potentially sensitive personal medical/identifying information by searching each string in the plaintext payload in several dictionaries. We used three dictionaries: a list of the 100 most common medical terms/conditions from Barron's Medical Dictionary~\cite{barrons}, a list of the most popular first male and female names according to the U.S. Census Bureau~\cite{names}, and a list of the most common personal identifying information (i.e. passport number, license, name, address, etc.) according to the National Institute of Standards and Technology~\cite{nist}. 
 
 \subsection{Metadata Analysis}
-In cases when devices encrypted application-level data or utilized secure protocols such as TLS or SSL, we were still able to infer rough user behavior during traffic collection due to the fact that the devices studied are only used to make periodic measurements and are not always on. For example, blood sugar may be measured at regular intervals throughout the day (such as after a meal) and smart scales might be used once every morning. Using Wireshark, we were able to associate periods of device activity based on time stamps and origin IP addresses, thereby keeping track of each device reading. In some cases, we were able to determine what the behavior of the user during that period of activity by examining the descriptions of the destination IP addresses in Wireshark. Figure 3 shows how the Withings Smart Scale communicates with $scalews.withings.net$ in the course of transmitting data about a current measurement.
+In cases when devices encrypted application-level data or utilized secure protocols such as TLS or SSL, we were still able to infer rough user behavior during traffic collection due to the fact that the devices studied are only used to make periodic measurements and are not always on. For example, blood sugar may be measured at regular intervals throughout the day (such as after a meal) and smart scales might be used once every morning. Using Wireshark, we were able to associate periods of device activity based on time stamps and origin IP addresses, thereby keeping track of each device reading. In some cases, we were able to determine what the behavior of the user during that period of activity by examining the descriptions of the destination IP addresses in Wireshark. For example, the Withings Smart Scale always communicates with $scalews.withings.net$ in the course of transmitting data about a current measurement, making all outgoing traffic easily identifiable.
 
-\begin{figure}
-  \caption{Withings Smart Scale traffic destinations}
-  \begin{center}
-    \begin{tabular}{c|c} 
-    \textbf{Dest IP} & \textbf{Description} \\ [0.5ex] 
-    \hline
-    $224.0.0.251$ & withings-aura-bridge.tcp.local \\ 
-    \hline
-    $172.24.1.1$ & scalews.withings.net \\
-    \hline
-    $172.24.1.1$ & maintws.withings.net \\
-    \hline
-    $172.24.1.1$ & static.withings.com \\ [1ex] 
-    \end{tabular}
-  \end{center}
-\end{figure}
+% \begin{figure}
+%   \begin{center}
+%     \begin{tabular}{c|c} 
+%     \textbf{Dest IP} & \textbf{Description} \\ [0.5ex] 
+%     \hline
+%     $224.0.0.251$ & withings-aura-bridge.tcp.local \\ 
+%     \hline
+%     $172.24.1.1$ & scalews.withings.net \\
+%     \hline
+%     $172.24.1.1$ & maintws.withings.net \\
+%     \hline
+%     $172.24.1.1$ & static.withings.com \\ [1ex] 
+%     \end{tabular}
+%   \end{center}
+%   \caption{Withings Smart Scale traffic destinations}
+% \end{figure}
 
 \section{Detected Privacy Vulnerabilties}
 
@@ -167,7 +174,7 @@ Even more concerning, we observed that one of the signature characteristics of t
 
 \begin{figure}
   \centering
-    \fbox{\includegraphics[scale=0.5]{bloodpressure}}
+    \fbox{\includegraphics[scale=0.35]{bloodpressure}}
      \caption{Withings Blood Pressure Monitor sends image indicating device purpose in the clear.}
      \label{fig:bp-image}
 \end{figure}
@@ -201,17 +208,15 @@ This research suggests that medical IoT device manufacturers are not necessarily
 
 Lastly, this research underscores the lack of awareness among the general public when it comes to the confidentiality and integrity of their personal data. As technology becomes increasingly capable and complex, it will only become more difficult for users of connected devices to comprehend what sort of data can be extracted from their digital footprint, even if the devices they are using encrypt first order information. Tools like the user interface presented in this paper are in the public interest to increase the visibility of device vulnerabilities, awareness of personal confidentiality weaknesses, and accountability among device manufacturers.
 
-
-\section{Conclusion}
-
-These results reveal multiple known vulnerabilities within IoT devices, but there are heightened implications due to the sensitive nature of the medical metadata being disclosed. Particularly if used by healthcare professionals to measure patient vital signs/data over time, these medical IoT devices need to be more carefully examined by regulators and physician networks to increase the awareness of this information leakage before they are implemented on a wider scale. 
-
-
 \section{Future Work}
 
 Since the devices examined in this paper are not always on, as in the case of some other home IoT devices such as an Amazon Echo or Google Nest Thermostat, future research should examine always-on medical IoT devices, such as smart glucose pumps. Such devices may have increased demand for security and privacy, and additionally make metadata analysis more difficult, since device traffic is not necessarily correlated with user behavior and activity. 
 
 While detecting plaintext application-level data is an important first step in understanding the severity of medical IoT security and privacy vulnerabilities, it should be considered "low hanging fruit." Frequently, device manufacturers and software engineers will program IoT devices to transmit payloads that have been compressed in an effort to reduce the number of packets transmitted (and not necessarily as a means of obfuscating plaintext traffic). Thus, an extension of our research would include methods of distinguishing compressed traffic from encrypted traffic. Once this has been done, it would be possible to brute force decompression using a list of widely used decompression algorithms and then apply our deep packet inspection methodology on the resulting plaintext. Distinguishing compressed text (which already has a high entropy value) from encrypted text is not something that the Shannon Entropy or Chi Squared tests are particularly accurate at doing, so a more advanced classification technique, perhaps using a machine learning approach, could be employed. 
+
+\section{Conclusion}
+
+These results reveal multiple known vulnerabilities within IoT devices, but there are heightened implications due to the sensitive nature of the medical metadata being disclosed. Particularly if used by healthcare professionals to measure patient vital signs/data over time, these medical IoT devices need to be more carefully examined by regulators and physician networks to increase the awareness of this information leakage before they are implemented on a wider scale. 
 
 \appendix
 
