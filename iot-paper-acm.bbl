@@ -131,6 +131,18 @@
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Mosley}{Mosley}{2017}]%
+        {cra}
+\bibfield{author}{\bibinfo{person}{Brian Mosley}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{NSF Funded IoT Security Research Excites at the 2017
+  CNSF Exhibition}.
+\newblock
+  \bibinfo{howpublished}{http://cra.org/govaffairs/blog/2017/05/2017-cnsf-exhibition/}.
+    (\bibinfo{year}{2017}).
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{of~Health and for Civil~Rights}{of~Health and
   for Civil~Rights}{nda}]%
         {privacyHIPAArule}

@@ -21,13 +21,15 @@ Encryption is the most obvious determinant of confidentiality in medical IoT dev
 
 Even when medical IoT devices encrypt data transmitted to the cloud, a network observer could scrutinize metadata to obtain information about a user.  Several recent studies have demonstrated that IoT device traffic analysis can reveal user behavior  from correlations between device network activity and user interactions \cite{apthorpeIoT}.  
 
-This paper examines whether in the course of regular behavior, today's commercially-available smart medical devices properly protect all individually identifiable health information as dictated by HIPAA.  We evaluate a suite of medical IoT devices, including the Withings Smart Blood Pressure Monitor, Withings Smart Scale, iHealth Smart Gluco-Monitoring System, iHealth Ease Wireless Blood Pressure Monitor, and 1byOne Digital Smart Wireless Scale.  We record and analyze network traffic from these devices and attempt to identify plaintext health information and/or metadata that would allow an adversary to infer e-PHI from encrypted communications.  
+This paper examines whether in the course of regular behavior, today's commercially-available smart medical devices properly protect all individually identifiable health information as dictated by HIPAA.  We evaluate a suite of medical IoT devices, including the Withings Smart Blood Pressure Monitor, Withings Smart Scale, iHealth Ease Wireless Blood Pressure Monitor, and 1byOne Digital Smart Wireless Scale, all of which are popular and readily available on Amazon. We record and analyze network traffic from these devices and attempt to identify plaintext health information and/or metadata that would allow an adversary to infer e-PHI from encrypted communications.  
 
-Surprisingly, we find that multiple tested devices send information related to their users' heath in plaintext.  This result is concerning given our relatively small sample of devices, and indicates that plaintext transmission of heath information may be a widespread privacy vulnerability across the market of IoT medical devices. Even more worrisome, we found plaintext health information in communications from devices that use SSL/TLS transport layer encryption. This health information was sent in cookies, URLs, and occasional unencrypted connections---all indicative of poor development practices by device manufacturers. 
+We had two main findings. First, we find that multiple devices that were tested send information related to their users' heath in plaintext. This result is concerning given our relatively small sample of devices, and indicates that plaintext transmission of heath information may be a widespread privacy vulnerability across the market of IoT medical devices. Even more worrisome, we found plaintext health information in communications from devices that use SSL/TLS transport layer encryption. This health information was sent in cookies, URLs, and occasional unencrypted connections---all indicative of poor development practices by device manufacturers. 
 
-Even the devices that consistently encrypt health information are not without privacy vulnerabilities.  Network observers and adversaries can see traffic from these devices as being generated from specific IP addresses. By examining network traffic from an access point, it is possible to isolate traffic originating from a fixed set of IP addresses and subsequently mine the associated metadata for sensitive medical information. While in some home and hospital settings, individual IP addresses may be shielded by a NAT, the rise of IPv6 and devices tethered to cell phones makes this protection less relevant. 
+Secondly, even the devices that consistently encrypt health information are not without privacy vulnerabilities. Network observers and adversaries can see traffic from these devices as being generated from specific IP addresses. By examining network traffic from an access point, it is possible to isolate traffic originating from a fixed set of IP addresses and subsequently mine the associated metadata for sensitive medical information. While in some home and hospital settings, individual IP addresses may be shielded by a NAT, the rise of IPv6 and devices tethered to cell phones makes this protection less relevant. 
 
-Though patients and doctors expect their e-PHI to be properly protected, one of the major problems with commercially available IoT devices on the market is the user's lack of visibility in terms of how their data is handled. This paper presents a simple and intuitive user interface for IoT device users to monitor and visualize the data that their medical IoT devices transmit to the Internet. As traffic data from a suite of connected devices is captured on a local Wi-Fi access point, we mine the traffic for potentially revealing electronic personal health information that has been transmitted in the clear. The user interface lists each device connected to the access point, warning the user of potential plaintext leakages associated with each device. The goal was to make the interface universally intelligible so that average users with no comprehension of packets, encryption, or networks would be able to monitor how each device protected their e-PHI.
+Though patients and doctors expect their e-PHI to be properly protected, one of the major problems with commercially available IoT devices on the market is the user's lack of visibility in terms of how their data is handled. This paper presents a simple and intuitive user interface for IoT device users to monitor and visualize the data that their medical IoT devices transmit to the Internet. As traffic data from a suite of connected devices is captured on a local Wi-Fi access point, we mine the traffic for potentially revealing electronic personal health information that has been transmitted in the clear. The user interface lists each device connected to the access point, warning the user of potential plaintext leakages associated with each device (Figure 1). The goal was to make the interface universally intelligible so that average users with no comprehension of packets, encryption, or networks would be able to monitor how each device protected their e-PHI.
+
+Lastly, we presented our findings to members of congress, including Senator Edward Markey (MA) and Congressman Joe Kennedy (MA), to raise awareness of the potential vulnerabilites in IoT devices and of the lack of security or privacy standardization among IoT device manufacturers. Additionally, as a featured participant in the 2017 Capital Hill Exhibition, we addressed the need for increased consumer visibility into the data that their IoT devices are sending across the Internet~\cite{cra}.
 
 \begin{figure}
   \centering
@@ -67,9 +69,9 @@ the proliferation of the medical Internet of Things will revolutionize digital h
 We analyzed medical IoT device network traffic for privacy vulnerabilities using a three phase process:
 
 \begin{enumerate}
-  \item Data collection
-  \item Plaintext identification
-  \item Metadata analysis
+  \item Data collection: where we convert a Raspberry Pi into a Wi-Fi access point and collect traffic from a suite of connected IoT devices
+  \item Plaintext identification: where we search captured traffic for plaintext application data revealing patient information
+  \item Metadata analysis: where we examine second order information such as device activity to infer user behavior
 \end{enumerate}
 
 \subsection{Data Collection}
@@ -161,7 +163,7 @@ In cases when devices encrypted application-level data or utilized secure protoc
 %   \caption{Withings Smart Scale traffic destinations}
 % \end{figure}
 
-\section{Detected Privacy Vulnerabilties}
+\section{Device Vulnerability Analysis}
 
 We found a very large variability in the methods each device used to send application data through the network when registering users, sending patches and updates, measuring vitals, or retrieving health analytics. All of the devices used encryption and protocols such as TLS or SSH to send sensitive first order information, such as the user's actual weight or blood sugar levels. However, there were various degrees of leaking second order information and metadata, scraped from sources such as HTTP GET requests, packet header information, and device conversation IP tables. Of the devices that we captured traffic for, the most secure implementation was the 1byOne Digital Smart Wireless Body Fat Scale. This device not only used encrypted protocols to deliver application data, but also masked names of packet destinations, unlike the Withings devices. 
 
@@ -194,21 +196,19 @@ In sharp contrast to the Withings Blood Pressure Monitor, the Withings and 1byOn
 Therefore, when we ran the deep packet analysis of the traffic, it was not possible to compile information about the user's behavior in the same way as with the blood pressure monitor. This suggests that it is relatively easy for device manufacturers to properly protect patient information by encrypting application level data and using secure protocols such as TLS or SSL to transmit application data.
 
 
-\section{Informing Users of Vulnerabilities}
+% \section{Informing Users of Vulnerabilities}
 
-Our final goal was to design a hub for consumers to connect their smart home devices and easily monitor potential confidentiality breaches during regular device usage through a user interface. The hub, programmed on a Raspberry Pi, acted as a Wi-Fi and Bluetooth access point. Since all device traffic flows through the hub, we were able to capture and analyze the transmitted data from each device and display potential vulnerabilities on a dashboard running on the Raspberry Pi. 
+% Our final goal was to design a hub for consumers to connect their smart home devices and easily monitor potential confidentiality breaches during regular device usage through a user interface. The hub, programmed on a Raspberry Pi, acted as a Wi-Fi and Bluetooth access point. Since all device traffic flows through the hub, we were able to capture and analyze the transmitted data from each device and display potential vulnerabilities on a dashboard running on the Raspberry Pi. 
 
-Because consumers currently have no visibility into the types of traffic and information their devices are transmitting across the internet, the objective was to design a user-friendly interface that would alert each user of potentially confidential or private information that was discovered using this paper's deep packet inspection approach. The dashboard simply displayed each connected device, followed by a list of personally identifiable information or medical terms discovered in the course of deep packet inspection. 
+% Because consumers currently have no visibility into the types of traffic and information their devices are transmitting across the internet, the objective was to design a user-friendly interface that would alert each user of potentially confidential or private information that was discovered using this paper's deep packet inspection approach. The dashboard simply displayed each connected device, followed by a list of personally identifiable information or medical terms discovered in the course of deep packet inspection. 
 
-\section{Discussion}
+\section{Discussion and Future Work}
 
 The sheer diversity of devices, protocols, and lack of standardization between device manufacturers makes it very difficult to detect all vulnerabilities, or to even identify all of the devices that are connected to a network.
 
 This research suggests that medical IoT device manufacturers are not necessarily aligned with policies including the Privacy and Security rules of HIPAA, and they may inadvertently reveal sensitive data and metadata about a user's behavior and medical condition. For example, the Privacy rule dictates that manufacturers and medical professionals protect personally identifying information such as the individual's past, present or future physical or mental health or condition. Though we found no instances of full names or biologically identifiable information being leaked, in the digital age, policy makers and manufacturers should recognize the importance of encrypting all application data and protecting metadata.
 
-Lastly, this research underscores the lack of awareness among the general public when it comes to the confidentiality and integrity of their personal data. As technology becomes increasingly capable and complex, it will only become more difficult for users of connected devices to comprehend what sort of data can be extracted from their digital footprint, even if the devices they are using encrypt first order information. Tools like the user interface presented in this paper are in the public interest to increase the visibility of device vulnerabilities, awareness of personal confidentiality weaknesses, and accountability among device manufacturers.
-
-\section{Future Work}
+This research underscores the lack of awareness among the general public when it comes to the confidentiality and integrity of their personal data. As technology becomes increasingly capable and complex, it will only become more difficult for users of connected devices to comprehend what sort of data can be extracted from their digital footprint, even if the devices they are using encrypt first order information. Tools like the user interface presented in this paper are in the public interest to increase the visibility of device vulnerabilities, awareness of personal confidentiality weaknesses, and accountability among device manufacturers.
 
 Since the devices examined in this paper are not always on, as in the case of some other home IoT devices such as an Amazon Echo or Google Nest Thermostat, future research should examine always-on medical IoT devices, such as smart glucose pumps. Such devices may have increased demand for security and privacy, and additionally make metadata analysis more difficult, since device traffic is not necessarily correlated with user behavior and activity. 
 
@@ -216,9 +216,5 @@ While detecting plaintext application-level data is an important first step in u
 
 \section{Conclusion}
 
-These results reveal multiple known vulnerabilities within IoT devices, but there are heightened implications due to the sensitive nature of the medical metadata being disclosed. Particularly if used by healthcare professionals to measure patient vital signs/data over time, these medical IoT devices need to be more carefully examined by regulators and physician networks to increase the awareness of this information leakage before they are implemented on a wider scale. 
+By capturing network traffic from a suite of IoT devices and conducting deep packet inspection, we were able to identify examples of plaintext and metadata leaks that compromise users' privacy. These results reveal multiple known vulnerabilities within IoT devices, but there are heightened implications due to the sensitive nature of the medical metadata being disclosed. Particularly if used by healthcare professionals to measure patient vital signs/data over time, these medical IoT devices need to be more carefully examined by regulators and physician networks to increase the awareness of this information leakage before they are implemented on a wider scale. 
 
-\appendix
-
-\section*{Acknowledgements}
-Thanks to Dillon Reisman, Rohan Doshi, and Gudrun Jonsdottir for their thoughts and contributions to the discussions that focused this work. 
