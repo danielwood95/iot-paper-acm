@@ -9,7 +9,7 @@
 PACKAGE=acmart
 
 SAMPLES = \
-	iot-paper-acm.tex 
+	iot-paper-acm.tex ccs-body.tex
 
 PDF = $(PACKAGE).pdf ${SAMPLES:%.tex=%.pdf}
 
@@ -19,8 +19,6 @@ all:  ${PDF}
 	pdflatex $<
 	- bibtex $*
 	pdflatex $<
-	- makeindex -s gind.ist -o $*.ind $*.idx
-	- makeindex -s gglo.ist -o $*.gls $*.glo
 	pdflatex $<
 	while ( grep -q '^LaTeX Warning: Label(s) may have changed' $*.log) \
 	do pdflatex $<; done
