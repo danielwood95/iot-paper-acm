@@ -13,7 +13,14 @@ SAMPLES = \
 
 PDF = $(PACKAGE).pdf ${SAMPLES:%.tex=%.pdf}
 
-all:  ${PDF}
+all:  pdf
+
+pdf: $(SAMPLES)
+	pdflatex iot-paper-acm
+	pdflatex iot-paper-acm
+	bibtex iot-paper-acm
+	pdflatex iot-paper-acm
+
 
 %.pdf:  %.dtx   $(PACKAGE).cls
 	pdflatex $<
