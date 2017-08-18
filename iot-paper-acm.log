@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  18 AUG 2017 15:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  18 AUG 2017 17:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -996,7 +996,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 64.
 Here is how much of TeX's memory you used:
  16987 strings out of 493089
  256726 string characters out of 6134842
- 364963 words of memory out of 5000000
+ 365052 words of memory out of 5000000
  19671 multiletter control sequences out of 15000+600000
  121467 words of font info for 276 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
@@ -1022,7 +1022,7 @@ local/texlive/2015/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/newtx/zxlr.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on iot-paper-acm.pdf (6 pages, 2134935 bytes).
+Output written on iot-paper-acm.pdf (6 pages, 2146903 bytes).
 PDF statistics:
  255 PDF objects out of 1000 (max. 8388607)
  204 compressed objects within 3 object streams
