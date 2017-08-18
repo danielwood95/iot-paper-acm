@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  18 AUG 2017 13:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  18 AUG 2017 13:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -661,11 +661,15 @@ nuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 2354.
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/preprint/balance.sty
+Package: balance 1999/02/23 4.3 (PWD)
+\oldvsize=\dimen142
 )
 Class acmart Info: Suppressing bibformat on input line 11.
 Class acmart Info: Printing CCS on input line 11.
 Class acmart Info: Printing folios on input line 11.
- (./iot-paper-acm.aux)
+
+(./iot-paper-acm.aux)
 \openout1 = `iot-paper-acm.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 15.
@@ -790,13 +794,13 @@ LaTeX Info: Redefining \nameref on input line 15.
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count126
-\scratchdimen=\dimen142
+\scratchdimen=\dimen143
 \scratchbox=\box35
 \nofMPsegments=\count127
 \nofMParguments=\count128
 \everyMPshowfont=\toks32
 \MPscratchCnt=\count129
-\MPscratchDim=\dimen143
+\MPscratchDim=\dimen144
 \MPnumerator=\count130
 \makeMPintoPDFobject=\count131
 \everyMPtoPDFconversion=\toks33
@@ -953,13 +957,19 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 
 Underfull \vbox (badness 1371) has occurred while \output is active []
 
- [5.5])
-[6.6
 
-]
+
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
+
+[5.5])
+Overfull \vbox (1.326pt too high) has occurred while \output is active []
+
+ [6.6]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 53.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 53.
- (./iot-paper-acm.aux)
+
+(./iot-paper-acm.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 53.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 53.
 Package rerunfilecheck Info: File `iot-paper-acm.out' has not changed.
@@ -967,10 +977,10 @@ Package rerunfilecheck Info: File `iot-paper-acm.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 53.
  ) 
 Here is how much of TeX's memory you used:
- 16906 strings out of 493117
- 255049 string characters out of 6135433
- 364391 words of memory out of 5000000
- 19595 multiletter control sequences out of 15000+600000
+ 16924 strings out of 493117
+ 255416 string characters out of 6135433
+ 364777 words of memory out of 5000000
+ 19609 multiletter control sequences out of 15000+600000
  119376 words of font info for 269 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  60i,11n,94p,1158b,572s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -993,7 +1003,7 @@ texlive/2014/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/local/texlive
 /2014/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/2014/t
 exmf-dist/fonts/type1/public/newtx/zxlr.pfb></usr/local/texlive/2014/texmf-dist
 /fonts/type1/public/newtx/zxlri.pfb>
-Output written on iot-paper-acm.pdf (6 pages, 2073544 bytes).
+Output written on iot-paper-acm.pdf (6 pages, 2073542 bytes).
 PDF statistics:
  248 PDF objects out of 1000 (max. 8388607)
  200 compressed objects within 2 object streams
